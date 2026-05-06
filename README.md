@@ -145,6 +145,12 @@ The vehicle can be controlled by publishing the steering angle in radians and ve
 /velocity
 ```
 
+The following topics can be subscribed to access the vehicle's odometry & imu sensor data and retrieve its information:
+```bash
+/odom
+/imu
+```
+
 The following topics can be subscribed to access the camera image and retrieve its information:
 
 ```bash
