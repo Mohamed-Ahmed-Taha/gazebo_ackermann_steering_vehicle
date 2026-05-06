@@ -31,8 +31,10 @@ To use this package, you'll need the following:
 **Make sure to install the following ROS 2 Jazzy Jalisco packages:**
 
 ```bash
+sudo apt update
 sudo apt install -y \
      ros-jazzy-ros2-controllers \
+     ros-jazzy-ros2-control \
      ros-jazzy-gz-ros2-control \
      ros-jazzy-ros-gz \
      ros-jazzy-ros-gz-bridge \
