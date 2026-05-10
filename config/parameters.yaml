@@ -1,15 +1,15 @@
 /**:
   ros__parameters:
     # Body params
-    body_length: 0.3 # Length of the vehicle's body [m]
-    body_width: 0.18 # Width of the vehicle's body [m]
-    body_height: 0.05 # Height of the vehicle's body [m]
-    body_density: 7850.0 # Density of the vehicle's body material, e.g., steel [kg/m^3]
+    body_length: 0.35 # Length of the vehicle's body [m]
+    body_width: 0.15 # Width of the vehicle's body [m]
+    body_height: 0.045 # Height of the vehicle's body [m]
+    body_density: 1240 # Density of the vehicle's body material, e.g., steel [kg/m^3]
 
     # Wheel params
-    wheel_radius: 0.04 # Radius of each wheel [m]
-    wheel_width: 0.02 # Width of each wheel [m]
-    wheel_density: 900.0 # Density of the wheel material, e.g., rubber [kg/m^3]
+    wheel_radius: 0.032 # Radius of each wheel [m]
+    wheel_width: 0.035 # Width of each wheel [m]
+    wheel_density: 1175 # Density of the wheel material, e.g., rubber [kg/m^3]
 
     # Kinematics and dynamics params
     max_steering_angle: 0.6108652 # Maximum steering angle of the vehicle [rad]
