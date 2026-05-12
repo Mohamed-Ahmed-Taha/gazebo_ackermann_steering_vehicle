@@ -1,0 +1,160 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <world name="racing_track_world">
+
+    <gravity>0 0 -9.81</gravity>
+
+    <!-- Ground -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.30 0.30 0.30 1</ambient>
+            <diffuse>0.30 0.30 0.30 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!--
+      Track 02 dimensions from milestone:
+      Track length = 10 m
+      Total road width = 0.75 m
+      Center line y = 0
+      Upper wall y = +0.375
+      Lower wall y = -0.375
+      Lane 1 center y = +0.1875
+      Lane 2 center y = -0.1875
+    -->
+
+    <!-- Road surface -->
+    <model name="road_surface">
+      <static>true</static>
+      <link name="link">
+        <pose>5 0 0.01 0 0 0</pose>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>10.0 0.75 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.08 0.08 0.08 1</ambient>
+            <diffuse>0.08 0.08 0.08 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Upper wall -->
+    <model name="upper_wall">
+      <static>true</static>
+      <link name="link">
+        <pose>5 0.425 0.20 0 0 0</pose>
+        <collision name="collision">
+          <geometry><box><size>10.0 0.10 0.40</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>10.0 0.10 0.40</size></box></geometry>
+          <material><ambient>1 0.45 0 1</ambient><diffuse>1 0.45 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Lower wall -->
+    <model name="lower_wall">
+      <static>true</static>
+      <link name="link">
+        <pose>5 -0.425 0.20 0 0 0</pose>
+        <collision name="collision">
+          <geometry><box><size>10.0 0.10 0.40</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>10.0 0.10 0.40</size></box></geometry>
+          <material><ambient>1 0.45 0 1</ambient><diffuse>1 0.45 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Center dashed line -->
+    <model name="center_line_1"><static>true</static><link name="link"><pose>1 0 0.04 0 0 0</pose><visual name="visual"><geometry><box><size>0.50 0.025 0.02</size></box></geometry><material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material></visual></link></model>
+    <model name="center_line_2"><static>true</static><link name="link"><pose>2 0 0.04 0 0 0</pose><visual name="visual"><geometry><box><size>0.50 0.025 0.02</size></box></geometry><material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material></visual></link></model>
+    <model name="center_line_3"><static>true</static><link name="link"><pose>3 0 0.04 0 0 0</pose><visual name="visual"><geometry><box><size>0.50 0.025 0.02</size></box></geometry><material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material></visual></link></model>
+    <model name="center_line_4"><static>true</static><link name="link"><pose>4 0 0.04 0 0 0</pose><visual name="visual"><geometry><box><size>0.50 0.025 0.02</size></box></geometry><material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material></visual></link></model>
+    <model name="center_line_5"><static>true</static><link name="link"><pose>5 0 0.04 0 0 0</pose><visual name="visual"><geometry><box><size>0.50 0.025 0.02</size></box></geometry><material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material></visual></link></model>
+    <model name="center_line_6"><static>true</static><link name="link"><pose>6 0 0.04 0 0 0</pose><visual name="visual"><geometry><box><size>0.50 0.025 0.02</size></box></geometry><material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material></visual></link></model>
+    <model name="center_line_7"><static>true</static><link name="link"><pose>7 0 0.04 0 0 0</pose><visual name="visual"><geometry><box><size>0.50 0.025 0.02</size></box></geometry><material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material></visual></link></model>
+    <model name="center_line_8"><static>true</static><link name="link"><pose>8 0 0.04 0 0 0</pose><visual name="visual"><geometry><box><size>0.50 0.025 0.02</size></box></geometry><material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material></visual></link></model>
+    <model name="center_line_9"><static>true</static><link name="link"><pose>9 0 0.04 0 0 0</pose><visual name="visual"><geometry><box><size>0.50 0.025 0.02</size></box></geometry><material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material></visual></link></model>
+
+    <!-- Start marker -->
+    <model name="start_marker">
+      <static>true</static>
+      <link name="link">
+        <pose>0.20 0 0.05 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.12 0.75 0.04</size></box></geometry>
+          <material><ambient>0 1 0 1</ambient><diffuse>0 1 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- End marker -->
+    <model name="end_marker">
+      <static>true</static>
+      <link name="link">
+        <pose>9.80 0 0.05 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.12 0.75 0.04</size></box></geometry>
+          <material><ambient>0 0 1 1</ambient><diffuse>0 0 1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Obstacle 1 attached to upper wall, extends downward into Lane 1 -->
+    <model name="obstacle_1_upper">
+      <static>true</static>
+      <link name="link">
+        <pose>4.00 0.225 0.20 0 0 0</pose>
+        <collision name="collision">
+          <geometry><box><size>0.20 0.40 0.40</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.20 0.40 0.40</size></box></geometry>
+          <material><ambient>1 0.45 0 1</ambient><diffuse>1 0.45 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Obstacle 2 attached to lower wall, extends upward into Lane 2 -->
+    <model name="obstacle_2_lower">
+      <static>true</static>
+      <link name="link">
+        <pose>7.40 -0.225 0.20 0 0 0</pose>
+        <collision name="collision">
+          <geometry><box><size>0.20 0.40 0.40</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.20 0.40 0.40</size></box></geometry>
+          <material><ambient>1 0.45 0 1</ambient><diffuse>1 0.45 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
