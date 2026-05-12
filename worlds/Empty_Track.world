@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <world name="empty_track_world">
+
+    <gravity>0 0 -9.81</gravity>
+
+    <!-- Manual ground plane -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.35 0.35 0.35 1</ambient>
+            <diffuse>0.35 0.35 0.35 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Left wall -->
+    <model name="left_wall">
+      <static>true</static>
+      <link name="link">
+        <pose>5 1.0 0.25 0 0 0</pose>
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>10 0.1 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>10 0.1 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Right wall -->
+    <model name="right_wall">
+      <static>true</static>
+      <link name="link">
+        <pose>5 -1.0 0.25 0 0 0</pose>
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>10 0.1 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>10 0.1 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Center lane line -->
+    <model name="center_line">
+      <static>true</static>
+      <link name="link">
+        <pose>5 0 0.03 0 0 0</pose>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>10 0.03 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Start marker -->
+    <model name="start_marker">
+      <static>true</static>
+      <link name="link">
+        <pose>0.25 0 0.04 0 0 0</pose>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.15 1.8 0.03</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0 1 0 1</ambient>
+            <diffuse>0 1 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- End marker -->
+    <model name="end_marker">
+      <static>true</static>
+      <link name="link">
+        <pose>9.75 0 0.04 0 0 0</pose>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.15 1.8 0.03</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
